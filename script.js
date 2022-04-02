@@ -22,7 +22,7 @@ let setRandomColor = () => {
 }	
 
 
-
+body.addEventListener("load", setRandomColor);
 colorPicker1.addEventListener("input", setColor); 
 colorPicker2.addEventListener("input", setColor);
 button.addEventListener("click", setRandomColor);
