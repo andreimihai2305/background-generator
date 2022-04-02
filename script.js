@@ -1,16 +1,28 @@
 // Getting the DOM elements
-let colorPicker1 = document.querySelectorAll("input")[0];
-let colorPicker2 = document.querySelectorAll("input")[1];
-
-let h3 = document.querySelector("h3");
-let body = document.getElementById("background");
+const colorPicker1 = document.querySelectorAll("input")[0];
+const colorPicker2 = document.querySelectorAll("input")[1];
+const h3 = document.querySelector("h3");
+const body = document.getElementById("background");
+const button = document.getElementById("button-random");
 
 
 let setColor = () => {
-	let background = `linear-gradient(to right, ${colorPicker1.value}, ${colorPicker2.value})`;
+	const background = `linear-gradient(to right, ${colorPicker1.value}, ${colorPicker2.value})`;
 	body.style.background = background; 
 	h3.textContent = `${background};`;
 }
 
+let setRandomColor = () => {
+	const randomColor1 = Math.floor(Math.random()*16777215).toString(16);
+	const randomColor2 = Math.floor(Math.random()*16777215).toString(16);
+	colorPicker1.value = `#${randomColor1}`;
+	colorPicker2.value = `#${randomColor2}`;
+	setColor();
+
+}	
+
+
+
 colorPicker1.addEventListener("input", setColor); 
 colorPicker2.addEventListener("input", setColor);
+button.addEventListener("click", setRandomColor);
