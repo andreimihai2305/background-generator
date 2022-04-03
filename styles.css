@@ -46,8 +46,8 @@ button {
 	background-color: #4CAF50; /* Green */
 	border: 1px solid gray;
 	border-radius: 10px 10px;
-  	color: white;
-  	outline: none;
+  color: white;
+  outline: none;
 	padding: 10px 20px;
 	text-align: center;
 	text-decoration: none;
@@ -80,7 +80,7 @@ button:active {
 
 @media only screen and (max-width: 600px) {
 	body {
-		margin-top: 15vh;
+		margin-top: 12vh;
 	}
 
 	h1 {
@@ -89,5 +89,18 @@ button:active {
 
 	h3 {
 		font-size: 0.85em;
+	}
+
+	p {
+		margin: 10px 0px 0px 0px;
+	}
+
+	.colors {
+		display: block;
+	}
+	.text-input {
+		width: 50%;
+		margin: 10px auto;
+
 	}
 }
