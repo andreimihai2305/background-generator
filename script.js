@@ -38,8 +38,11 @@ const setRandomColor = () => {
 }	
 
 setRandomColor();
+
+// Setting DOM events
 colorPicker1.addEventListener("input", setColorWithPicker); 
 colorPicker2.addEventListener("input", setColorWithPicker);
+
 hexColorInput1.addEventListener("input", setColorWithHex);
 hexColorInput2.addEventListener("input", setColorWithHex);
 
